@@ -1,7 +1,7 @@
 const mongoose=require("mongoose");
 const connectDB=async()=>{
     try{
-    await mongoose.connect("mongodb://localhost:27017/Backend-Module");
+    await mongoose.connect(process.env.MONGO_URL);
     console.log("Connection is established");
     }
     catch(err){
